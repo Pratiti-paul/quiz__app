@@ -1,12 +1,26 @@
 body{
     background-color: #e6c0f8;
+    font-family: "Trirong", serif;
 
 }
 
+.title{
+  color: #4B0082;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.subtitle{
+  color: #4c0480;
+  text-align: center;
+  
+}
 .quiz-container {
     display: flex;
     justify-content: center;
-    gap: 40px;;
+    gap: 40px;
+    flex-direction: column;
     flex-wrap: wrap; 
     margin: 20px auto;
     padding: 40px;
@@ -17,8 +31,8 @@ body{
     background-color: #fce1f0;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    width: 500px;
+    /* padding: 40px; */
+    width: 30%;
     transition: transform 0.2s ease;
     display: flex;
     flex-direction: column;
@@ -32,28 +46,54 @@ body{
   .card-header {
     font-size: 1.25rem;
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
     color: #2f2f2f;
+    padding: 20px;
+    text-align: center;
+    background-color: #ba78c9;
+    border-radius: 8px;
   }
   
   .card-body {
-    flex-grow: 1;
+    
     color: #704f84;
-    margin-bottom: 1.5rem;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+    /* font-weight: bold; */
+    
   }
   
   .start-button {
-    padding: 10px 40px;
-    background-color: #4f46e5;
-    color: white;
-    border-radius: 0.5rem;
-    text-align: center;
-    cursor: pointer;
-    font-weight: 500;
-    transition: background-color 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
   }
   
-  .start-button:hover {
-    background-color: #4338ca;
+  
+
+  .card-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .button{
+    text-align: center;
+    padding: 20px 20px;
+    background-color: #451493;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+    height: 60px;
+    width: 400px;
+    margin-bottom: 20px;
+  }
+
+  .button:hover {
+    background-color: #6a29d3;
   }
   

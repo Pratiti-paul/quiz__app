@@ -84,19 +84,21 @@ function Home() {
 
 return (
   <div className="quiz-container">
-
+    <h1 className="title">Student Quiz Platform</h1>
+    <p className="subtitle">Select a subject to test your knowledge and see how you rank against your peers</p>
+    <div className="card-container">
       {
         quizData.map((item) => {
           return (
             <div className="quiz-card" key={item.id}>
               <div className="card-header">{item.title}</div>
               <div className="card-body">{item.description}</div>
-              <div className="start-button"> Start Quiz</div>
+              <div className="start-button"><button className="button">Start Quiz</button> </div>
             </div>
           );
         })
       }
-      
+      </div>
   </div>
   );
 }
