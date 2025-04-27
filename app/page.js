@@ -1,6 +1,9 @@
-import { Tilt_Neon } from "next/font/google";
 import Image from "next/image";
-import './page.css';
+import Header from "./components/Header";
+import Footer from "./components/Footer"; 
+import Content from "./components/Content";
+import Link from "next/link";
+import './page.css'
 
 const Globe = () => (
   <svg
@@ -56,7 +59,6 @@ const BookOpen = () => (
 
 
 
-
 function Home() {
   const quizData = [
     {
@@ -80,27 +82,39 @@ function Home() {
   ]
 
 
+  // function callback(item) {
+  //   return  <div className= "quiz-card" key={item.id}>
+  //   <div className="card-header">Web Application Programming (WAP)</div>
+  //   <div className="card-body">Test your knowledge of web technologies, HTML, CSS, and JavaScript.</div>
+  //   <div className="start-button"> Start Quiz</div>
+  // </div>
+  // }
+  // const quizCards = quizData.map(callback)
 
+  // quizCards
 
-return (
-  <div className="quiz-container">
-    <h1 className="title">Student Quiz Platform</h1>
-    <p className="subtitle">Select a subject to test your knowledge and see how you rank against your peers</p>
-    <div className="card-container">
-      {
-        quizData.map((item) => {
-          return (
-            <div className="quiz-card" key={item.id}>
-              <div className="card-header">{item.title}</div>
-              <div className="card-body">{item.description}</div>
-              <div className="start-button"><button className="button">Start Quiz</button> </div>
-            </div>
-          );
-        })
-      }
+  return (
+    <div className="container">
+      <h1 className="main-title">Student Quiz Platform</h1>
+      <p className="subtitle">Select a subject to test your knowledge and see how you rank against your peers.</p>
+
+      <div className="quiz-grid">
+        {quizData.map((category) => (
+          <div key={category.id} className={`quiz-card`}>
+            {/* First div - Icon with colored background */}
+            
+            <Header category={category}/>
+            {/* Second div - Description paragraph */}
+           <Content category={category}/>
+
+            {/* Third div - Button */}
+            <Footer/>
+          </div>
+        ))}
+        
       </div>
-  </div>
-  );
+    </div>
+    );
 }
 
 export default Home;
